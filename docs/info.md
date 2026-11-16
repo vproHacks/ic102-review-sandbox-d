@@ -30,7 +30,7 @@ all eight `ui_in` pins. A `uio` pin is an input until the block that claims it m
 | `uio[4]` | unclaimed | |
 | `uio[5]` | unclaimed | |
 | `uio[6]` | unclaimed | |
-| `uio[7]` | unclaimed | |
+| `uio[7]` | heartbeat: toggles every 256 clock cycles | course (AI-written) |
 
 ## How to test
 
