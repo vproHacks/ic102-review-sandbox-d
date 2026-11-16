@@ -8,7 +8,7 @@ from sandbox import pin, settle, start
 @cocotb.test()
 async def test_uo3_parity(dut):
     await start(dut)
-    for value, expected in [(0x00, 0), (0x01, 1)]:
+    for value, expected in [(0x00, 0), (0x01, 1), (0x10, 1), (0x80, 1), (0xF0, 0), (0xFF, 0)]:
         dut.ui_in.value = value
         await settle(dut)
         got = pin(dut, "uo[3]")
