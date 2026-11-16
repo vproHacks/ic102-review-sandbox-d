@@ -18,7 +18,7 @@ all eight `ui_in` pins. A `uio` pin is an input until the block that claims it m
 | `uo[0]` | unclaimed | |
 | `uo[1]` | unclaimed | |
 | `uo[2]` | unclaimed | |
-| `uo[3]` | unclaimed | |
+| `uo[3]` | parity: 1 when an odd number of ui_in pins are 1 | vproHacks |
 | `uo[4]` | unclaimed | |
 | `uo[5]` | unclaimed | |
 | `uo[6]` | unclaimed | |

@@ -5,7 +5,8 @@
 
 `default_nettype none
 
-// Slot uo[3]: unclaimed. CONTRIBUTING.md says how to claim it.
+// Slot uo[3]: parity, claimed by vproHacks.
+// 1 when an odd number of the eight ui_in pins are 1.
 module slot_uo3 (
     input  wire       clk,
     input  wire       rst_n,
@@ -13,9 +14,8 @@ module slot_uo3 (
     output wire       out     // drives uo[3]
 );
 
-  // Unclaimed: drive 0.
-  assign out = 1'b0;
+  assign out = ^in;
 
-  wire _unused = &{clk, rst_n, in, 1'b0};
+  wire _unused = &{clk, rst_n, 1'b0};
 
 endmodule
