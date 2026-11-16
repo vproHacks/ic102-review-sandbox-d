@@ -1,0 +1,22 @@
+name: docs
+
+# Changed from Tiny Tapeout's template, which runs on every push to any branch: here the
+# workflows run on pushes to main and on pull requests (including pull requests from forks),
+# so a branch is checked once its pull request is open, and not twice.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - name: Build docs
+        uses: TinyTapeout/tt-gds-action/docs@ttsky26d

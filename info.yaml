@@ -1,0 +1,72 @@
+# Tiny Tapeout project information
+project:
+  title:        "IC102-D review sandbox"      # Project title
+  author:       "IC102-D students"      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Sixteen small blocks, one per output pin, each added by a student in a reviewed pull request"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "1x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_uoftasic_ic102_sandbox"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "slot_uo0.v"
+    - "slot_uo1.v"
+    - "slot_uo2.v"
+    - "slot_uo3.v"
+    - "slot_uo4.v"
+    - "slot_uo5.v"
+    - "slot_uo6.v"
+    - "slot_uo7.v"
+    - "slot_uio0.v"
+    - "slot_uio1.v"
+    - "slot_uio2.v"
+    - "slot_uio3.v"
+    - "slot_uio4.v"
+    - "slot_uio5.v"
+    - "slot_uio6.v"
+    - "slot_uio7.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "in[0], shared by every slot"
+  ui[1]: "in[1], shared by every slot"
+  ui[2]: "in[2], shared by every slot"
+  ui[3]: "in[3], shared by every slot"
+  ui[4]: "in[4], shared by every slot"
+  ui[5]: "in[5], shared by every slot"
+  ui[6]: "in[6], shared by every slot"
+  ui[7]: "in[7], shared by every slot"
+
+  # Outputs
+  uo[0]: ""
+  uo[1]: ""
+  uo[2]: ""
+  uo[3]: ""
+  uo[4]: ""
+  uo[5]: ""
+  uo[6]: ""
+  uo[7]: ""
+
+  # Bidirectional pins
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
+
+# Do not change!
+yaml_version: 6
